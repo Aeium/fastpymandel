@@ -1,0 +1,20 @@
+Values that need to be defined for coloration to work:
+
+c is the original co-ordinate and z is the previous iteration
+
+__real__ z        - seems to be real value of pixel
+
+dstrands          - seems to be the stalks parameter
+
+cx                      cx = 
+
+limit = sqrt(__real__ z * __real__ z + __imag__ z * __imag__ z);
+
+dStrands_HI             dStrands_HI = limit + dStrands;
+dStrands_LO             dStrands_LO = limit - dStrands;
+dStrands_HI_cx          dStrands_HI_cx = fabs(cx) + dStrands
+dStrands_LO_cx          dStrands_LO_cx = fabs(cx) - dStrands
+dStrands_cxd        	dStrands_cxd = dStrands_HI_cx - dStrands_LO_cx;
+n_color_z         - seems to start at 0
+n_color           - not sure
+pXTemp[n_color]   - output image??    pXTemp = NULL;	// pointer to x temp array
